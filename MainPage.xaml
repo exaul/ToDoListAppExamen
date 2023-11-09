@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ToDoListApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ToDoListApp"
+    BackgroundColor="#b9d6f2">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StringToColorConverter x:Key="ColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Start">
+
+            <Image
+                Margin="0,10"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                Source="task.png" />
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+
+                <Entry
+                    HorizontalOptions="StartAndExpand"
+                    TextColor="Black"
+                    WidthRequest="270" />
+                <Button
+                    x:Name="AddBtn"
+                    Padding="10,10"
+                    Clicked="AddBtn_Clicked"
+                    Text="Agregar" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="FillAndExpand">
+                <ListView
+                    x:Name="TasksListView"
+                    BackgroundColor="Transparent"
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    ItemsSource="{Binding Tareas}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10" Orientation="Horizontal">
+                                    <Label HorizontalOptions="StartAndExpand" Text="{Binding TaskName}" />
+                                    <Label HorizontalOptions="End" Text="{Binding Status}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

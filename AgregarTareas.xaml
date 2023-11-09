@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ToDoListApp.AgregarTareas"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AgregarTareas">
+    <StackLayout>
+        <Entry x:Name="TaskNameEntry" Placeholder="TaskName" />
+        <Entry x:Name="StatusEntry" Placeholder="Status" />
+        <Button
+            x:Name="ConfirmarBtn"
+            Clicked="ConfirmarBtn_Clicked"
+            Text="Confirmar" />
+    </StackLayout>
+</ContentPage>
