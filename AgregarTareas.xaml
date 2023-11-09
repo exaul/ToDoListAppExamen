@@ -6,10 +6,10 @@
     Title="AgregarTareas">
     <StackLayout>
         <Entry x:Name="TaskNameEntry" 
-               Placeholder="TaskName" 
+               Placeholder="Ingrese la nueva tarea" 
                Text="{Binding NuevaTarea.TaskName}" />
         <Entry x:Name="StatusEntry" 
-               Placeholder="Status" 
+               Placeholder="Ingrese el estado de la tarea" 
                Text="{Binding NuevaTarea.Status}" />
         <Button x:Name="ConfirmarBtn" 
                 Clicked="ConfirmarBtn_Clicked" 
