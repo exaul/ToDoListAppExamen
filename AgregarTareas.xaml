@@ -5,11 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="AgregarTareas">
     <StackLayout>
-        <Entry x:Name="TaskNameEntry" Placeholder="TaskName" />
-        <Entry x:Name="StatusEntry" Placeholder="Status" />
-        <Button
-            x:Name="ConfirmarBtn"
-            Clicked="ConfirmarBtn_Clicked"
-            Text="Confirmar" />
+        <Entry x:Name="TaskNameEntry" 
+               Placeholder="TaskName" 
+               Text="{Binding NuevaTarea.TaskName}" />
+        <Entry x:Name="StatusEntry" 
+               Placeholder="Status" 
+               Text="{Binding NuevaTarea.Status}" />
+        <Button x:Name="ConfirmarBtn" 
+                Clicked="ConfirmarBtn_Clicked" 
+                Text="Confirmar" />
     </StackLayout>
 </ContentPage>
