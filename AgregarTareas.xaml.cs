@@ -11,8 +11,8 @@ public partial class AgregarTareas : ContentPage
     {
         string taskName = TaskNameEntry.Text;
         string status = StatusEntry.Text;
-
-        // Enviar los datos utilizando MessagingCenter
+        // se envian los datos 
+        
         MessagingCenter.Send(this, "AgregarTarea", new Tasks
         {
             TaskName = taskName,

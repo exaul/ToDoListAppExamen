@@ -11,6 +11,7 @@ namespace ToDoListApp
         {
             InitializeComponent();
             CreateOneTask();
+            // se reciben los datos 
             MessagingCenter.Subscribe<AgregarTareas, Tasks>(this, "AgregarTarea", (sender, tarea) =>
             {
                 Tareas.Add(tarea);
@@ -32,6 +33,7 @@ namespace ToDoListApp
         }
         private void AddBtn_Clicked(object sender, EventArgs e)
         {
+            // me va a enviar a la pantalla agregar tareas
             Navigation.PushAsync(new AgregarTareas());
             //Tareas.Add(new Tasks()
             //{
